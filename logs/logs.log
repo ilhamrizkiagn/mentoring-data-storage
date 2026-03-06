@@ -1,0 +1,307 @@
+2026-03-05 18:06:39,566 - INFO - ==================================STARTING EXTRACT DATA=======================================
+2026-03-05 18:06:41,448 - INFO - EXTRACT 'public.customers' - SUCCESS.
+2026-03-05 18:06:41,793 - INFO - EXTRACT 'public.geolocation' - SUCCESS.
+2026-03-05 18:06:44,661 - INFO - EXTRACT 'public.order_items' - SUCCESS.
+2026-03-05 18:06:46,112 - INFO - EXTRACT 'public.order_payments' - SUCCESS.
+2026-03-05 18:06:48,570 - INFO - EXTRACT 'public.orders' - SUCCESS.
+2026-03-05 18:06:49,507 - INFO - EXTRACT 'public.products' - SUCCESS.
+2026-03-05 18:06:49,530 - INFO - EXTRACT 'public.product_category_name_translation' - SUCCESS.
+2026-03-05 18:06:49,568 - INFO - EXTRACT 'public.sellers' - SUCCESS.
+2026-03-05 18:06:49,569 - INFO - Extract All Tables From Sources - SUCCESS
+2026-03-05 18:06:50,037 - INFO - ==================================ENDING EXTRACT DATA=======================================
+2026-03-05 18:06:50,047 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) done      Extract()
+2026-03-05 18:06:50,048 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-05 18:06:50,072 - INFO - Informed scheduler that task   Extract__99914b932b   has status   DONE
+2026-03-05 18:06:50,073 - DEBUG - Asking scheduler for work...
+2026-03-05 18:06:50,076 - DEBUG - Pending tasks: 2
+2026-03-05 18:06:50,079 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) running   Load()
+2026-03-05 18:06:50,247 - INFO - Read Load Query - SUCCESS
+2026-03-05 18:06:52,933 - INFO - Read Extracted Data - SUCCESS
+2026-03-05 18:06:52,935 - INFO - Connect to DWH - SUCCESS
+2026-03-05 18:06:55,388 - INFO - Truncate Bookings Schema in DWH - SUCCESS
+2026-03-05 18:06:55,389 - INFO - ==================================STARTING LOAD DATA=======================================
+2026-03-05 18:07:02,209 - INFO - LOAD 'extract.customers' - SUCCESS
+2026-03-05 18:07:03,455 - INFO - LOAD 'extract.geolocation' - SUCCESS
+2026-03-05 18:07:14,327 - INFO - LOAD 'extract.order_items' - SUCCESS
+2026-03-05 18:07:22,804 - INFO - LOAD 'extract.order_payments' - SUCCESS
+2026-03-05 18:07:32,182 - INFO - LOAD 'extract.orders' - SUCCESS
+2026-03-05 18:07:32,224 - INFO - LOAD 'extract.product_category_name_translation' - SUCCESS
+2026-03-05 18:07:36,385 - INFO - LOAD 'extract.products' - SUCCESS
+2026-03-05 18:07:36,565 - INFO - LOAD 'extract.sellers' - SUCCESS
+2026-03-05 18:07:36,566 - INFO - LOAD All Tables To DWH-Extract - SUCCESS
+2026-03-05 18:07:49,796 - INFO - LOAD All Tables To DWH-Staging - SUCCESS
+2026-03-05 18:07:49,799 - INFO - ==================================ENDING LOAD DATA=======================================
+2026-03-05 18:07:49,852 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) done      Load()
+2026-03-05 18:07:49,856 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-05 18:07:49,856 - INFO - Informed scheduler that task   Load__99914b932b   has status   DONE
+2026-03-05 18:07:49,856 - DEBUG - Asking scheduler for work...
+2026-03-05 18:07:49,856 - DEBUG - Pending tasks: 1
+2026-03-05 18:07:49,856 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) running   Transform()
+2026-03-05 18:07:50,536 - INFO - Read Transform Query - SUCCESS
+2026-03-05 18:07:50,539 - INFO - Connect to DWH - SUCCESS
+2026-03-05 18:07:50,539 - INFO - ==================================STARTING TRANSFROM DATA=======================================
+2026-03-05 18:07:52,507 - INFO - Transform to 'dim_cusotmer' - SUCCESS
+2026-03-05 18:07:52,765 - INFO - Transform to 'dim_geolocation' - SUCCESS
+2026-03-05 18:07:52,985 - INFO - Transform to 'dim_product' - SUCCESS
+2026-03-05 18:07:53,107 - INFO - Transform to 'dim_seller' - SUCCESS
+2026-03-05 18:08:04,809 - INFO - Transform to 'fct_purchase_order' - SUCCESS
+2026-03-05 18:08:04,819 - INFO - Transform to 'fct_shipment_status' - SUCCESS
+2026-03-05 18:08:04,826 - INFO - Transform to 'fct_spend_delivery' - SUCCESS
+2026-03-05 18:08:04,857 - INFO - Transform to All Dimensions and Fact Tables - SUCCESS
+2026-03-05 18:08:04,860 - INFO - ==================================ENDING TRANSFROM DATA=======================================
+2026-03-05 18:08:04,861 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) done      Transform()
+2026-03-05 18:08:04,862 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-05 18:08:04,864 - INFO - Informed scheduler that task   Transform__99914b932b   has status   DONE
+2026-03-05 18:08:04,865 - DEBUG - Asking scheduler for work...
+2026-03-05 18:08:04,865 - DEBUG - Done
+2026-03-05 18:08:04,866 - DEBUG - There are no more tasks to run at this time
+2026-03-05 18:08:04,867 - INFO - Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) was stopped. Shutting down Keep-Alive thread
+2026-03-05 18:08:04,868 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 3 ran successfully:
+    - 1 Extract()
+    - 1 Load()
+    - 1 Transform()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2026-03-05 18:06:39,566 - INFO - ==================================STARTING EXTRACT DATA=======================================
+2026-03-05 18:06:41,448 - INFO - EXTRACT 'public.customers' - SUCCESS.
+2026-03-05 18:06:41,793 - INFO - EXTRACT 'public.geolocation' - SUCCESS.
+2026-03-05 18:06:44,661 - INFO - EXTRACT 'public.order_items' - SUCCESS.
+2026-03-05 18:06:46,112 - INFO - EXTRACT 'public.order_payments' - SUCCESS.
+2026-03-05 18:06:48,570 - INFO - EXTRACT 'public.orders' - SUCCESS.
+2026-03-05 18:06:49,507 - INFO - EXTRACT 'public.products' - SUCCESS.
+2026-03-05 18:06:49,530 - INFO - EXTRACT 'public.product_category_name_translation' - SUCCESS.
+2026-03-05 18:06:49,568 - INFO - EXTRACT 'public.sellers' - SUCCESS.
+2026-03-05 18:06:49,569 - INFO - Extract All Tables From Sources - SUCCESS
+2026-03-05 18:06:50,037 - INFO - ==================================ENDING EXTRACT DATA=======================================
+2026-03-05 18:06:50,047 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) done      Extract()
+2026-03-05 18:06:50,048 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-05 18:06:50,072 - INFO - Informed scheduler that task   Extract__99914b932b   has status   DONE
+2026-03-05 18:06:50,073 - DEBUG - Asking scheduler for work...
+2026-03-05 18:06:50,076 - DEBUG - Pending tasks: 2
+2026-03-05 18:06:50,079 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) running   Load()
+2026-03-05 18:06:50,247 - INFO - Read Load Query - SUCCESS
+2026-03-05 18:06:52,933 - INFO - Read Extracted Data - SUCCESS
+2026-03-05 18:06:52,935 - INFO - Connect to DWH - SUCCESS
+2026-03-05 18:06:55,388 - INFO - Truncate Bookings Schema in DWH - SUCCESS
+2026-03-05 18:06:55,389 - INFO - ==================================STARTING LOAD DATA=======================================
+2026-03-05 18:07:02,209 - INFO - LOAD 'extract.customers' - SUCCESS
+2026-03-05 18:07:03,455 - INFO - LOAD 'extract.geolocation' - SUCCESS
+2026-03-05 18:07:14,327 - INFO - LOAD 'extract.order_items' - SUCCESS
+2026-03-05 18:07:22,804 - INFO - LOAD 'extract.order_payments' - SUCCESS
+2026-03-05 18:07:32,182 - INFO - LOAD 'extract.orders' - SUCCESS
+2026-03-05 18:07:32,224 - INFO - LOAD 'extract.product_category_name_translation' - SUCCESS
+2026-03-05 18:07:36,385 - INFO - LOAD 'extract.products' - SUCCESS
+2026-03-05 18:07:36,565 - INFO - LOAD 'extract.sellers' - SUCCESS
+2026-03-05 18:07:36,566 - INFO - LOAD All Tables To DWH-Extract - SUCCESS
+2026-03-05 18:07:49,796 - INFO - LOAD All Tables To DWH-Staging - SUCCESS
+2026-03-05 18:07:49,799 - INFO - ==================================ENDING LOAD DATA=======================================
+2026-03-05 18:07:49,852 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) done      Load()
+2026-03-05 18:07:49,856 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-05 18:07:49,856 - INFO - Informed scheduler that task   Load__99914b932b   has status   DONE
+2026-03-05 18:07:49,856 - DEBUG - Asking scheduler for work...
+2026-03-05 18:07:49,856 - DEBUG - Pending tasks: 1
+2026-03-05 18:07:49,856 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) running   Transform()
+2026-03-05 18:07:50,536 - INFO - Read Transform Query - SUCCESS
+2026-03-05 18:07:50,539 - INFO - Connect to DWH - SUCCESS
+2026-03-05 18:07:50,539 - INFO - ==================================STARTING TRANSFROM DATA=======================================
+2026-03-05 18:07:52,507 - INFO - Transform to 'dim_cusotmer' - SUCCESS
+2026-03-05 18:07:52,765 - INFO - Transform to 'dim_geolocation' - SUCCESS
+2026-03-05 18:07:52,985 - INFO - Transform to 'dim_product' - SUCCESS
+2026-03-05 18:07:53,107 - INFO - Transform to 'dim_seller' - SUCCESS
+2026-03-05 18:08:04,809 - INFO - Transform to 'fct_purchase_order' - SUCCESS
+2026-03-05 18:08:04,819 - INFO - Transform to 'fct_shipment_status' - SUCCESS
+2026-03-05 18:08:04,826 - INFO - Transform to 'fct_spend_delivery' - SUCCESS
+2026-03-05 18:08:04,857 - INFO - Transform to All Dimensions and Fact Tables - SUCCESS
+2026-03-05 18:08:04,860 - INFO - ==================================ENDING TRANSFROM DATA=======================================
+2026-03-05 18:08:04,861 - INFO - [pid 12876] Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) done      Transform()
+2026-03-05 18:08:04,862 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-05 18:08:04,864 - INFO - Informed scheduler that task   Transform__99914b932b   has status   DONE
+2026-03-05 18:08:04,865 - DEBUG - Asking scheduler for work...
+2026-03-05 18:08:04,865 - DEBUG - Done
+2026-03-05 18:08:04,866 - DEBUG - There are no more tasks to run at this time
+2026-03-05 18:08:04,867 - INFO - Worker Worker(salt=4517102942, workers=1, host=DESKTOP-576KSFG, username=Ilham, pid=12876) was stopped. Shutting down Keep-Alive thread
+2026-03-05 18:08:04,868 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 3 ran successfully:
+    - 1 Extract()
+    - 1 Load()
+    - 1 Transform()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2026-03-06 22:05:54,715 - INFO - ==================================STARTING EXTRACT DATA=======================================
+2026-03-06 22:05:54,768 - ERROR - EXTRACT 'public.customers' - FAILED.
+2026-03-06 22:05:54,847 - INFO - Extract All Tables From Sources - FAILED
+2026-03-06 22:05:54,863 - ERROR - [pid 1929] Worker Worker(salt=8768296766, workers=1, host=DESKTOP-576KSFG, username=ilham, pid=1929) failed    Extract()
+Traceback (most recent call last):
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3303, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5435 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/d/belajar_pacmann/data_storage/mentoring2/pipeline/extract.py", line 55, in run
+    df = pd.read_sql_query(extract_query.format(table_name = table_name), src_engine)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/pandas/io/sql.py", line 525, in read_sql_query
+    with pandasSQL_builder(con) as pandas_sql:
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/pandas/io/sql.py", line 906, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/pandas/io/sql.py", line 1636, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+                                        ^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3279, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2443, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3303, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5435 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/d/belajar_pacmann/data_storage/mentoring2/pipeline/extract.py", line 64, in run
+    raise Exception(f"Failed to extract '{table_name}' tables")
+Exception: Failed to extract 'public.customers' tables
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/luigi/worker.py", line 210, in run
+    new_deps = self._run_get_new_deps()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ilham/miniconda3/envs/ds-mentoring/lib/python3.11/site-packages/luigi/worker.py", line 138, in _run_get_new_deps
+    task_gen = self.task.run()
+               ^^^^^^^^^^^^^^^
+  File "/mnt/d/belajar_pacmann/data_storage/mentoring2/pipeline/extract.py", line 103, in run
+    raise Exception(f"FAILED to execute EXTRACT TASK !!!")
+Exception: FAILED to execute EXTRACT TASK !!!
+2026-03-06 22:05:55,513 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-06 22:05:55,520 - INFO - Informed scheduler that task   Extract__99914b932b   has status   FAILED
+2026-03-06 22:05:55,521 - DEBUG - Asking scheduler for work...
+2026-03-06 22:05:55,522 - DEBUG - Done
+2026-03-06 22:05:55,523 - DEBUG - There are no more tasks to run at this time
+2026-03-06 22:05:55,524 - DEBUG - There are 3 pending tasks possibly being run by other workers
+2026-03-06 22:05:55,525 - DEBUG - There are 3 pending tasks unique to this worker
+2026-03-06 22:05:55,526 - DEBUG - There are 3 pending tasks last scheduled by this worker
+2026-03-06 22:05:55,527 - INFO - Worker Worker(salt=8768296766, workers=1, host=DESKTOP-576KSFG, username=ilham, pid=1929) was stopped. Shutting down Keep-Alive thread
+2026-03-06 22:05:55,530 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 failed:
+    - 1 Extract()
+* 2 were left pending, among these:
+    * 2 had failed dependencies:
+        - 1 Load()
+        - 1 Transform()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
